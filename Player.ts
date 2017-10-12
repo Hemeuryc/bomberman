@@ -11,48 +11,59 @@ class Player{
         window.addEventListener("keydown", this.moveSelection,false);
     }
 
-    leftArrowPressed= function(){
-        let element = document.getElementById('player');
+    /**leftArrowPressed= function(){
+        console.log("leftArrowPressed");
+        let element = document.getElementById('bomber');
         element.style.left = parseInt(element.style.left) - 50 + 'px';
     }
 
     rightArrowPressed= function(){
-        let element = document.getElementById('player');
+        console.log("rightArrowPressed");
+        let element = document.getElementById('bomber');
         element.style.left = parseInt(element.style.left) + 50 + 'px';
     }
 
     upArrowPressed= function() {
-        let element = document.getElementById("player");
+        console.log("upArrowPressed");
+        let element = document.getElementById("bomber");
         element.style.top = parseInt(element.style.top) - 50 + 'px';
     }
 
-    downArrowPressed= function() {
-        let element = document.getElementById("player");
+    downArrowPressed = function () {
+        console.log("downArrowPressed");
+        let element = document.getElementById("bomber");
         element.style.top = parseInt(element.style.top) + 50 + 'px';
-    }
+    }**/
 
-    moveSelection = function (evt : any) {
-        console.log("moveSelection");
+    moveSelection(evt : any) {
+        //var element = document.getElementById('bomber');
+        console.log('moveSelection');
         console.log(evt.keyCode);
         switch (evt.keyCode) {
             case 37:
-                this.leftArrowPressed;
+                //this.leftArrowPressed();
+                var elementLeft = document.getElementById('bomber');
+                elementLeft.style.left = parseInt(elementLeft.style.left) - 5 + 'px';
                 console.log("left");
                 break;
             case 39:
-                this.rightArrowPressed;
+                //this.rightArrowPressed();
+                var elementRight = document.getElementById('bomber');
+                elementRight.style.left = parseInt(elementRight.style.left) + 5 + 'px';
                 console.log("right");
                 break;
             case 38:
-                this.upArrowPressed;
+                //this.upArrowPressed();
+                var elementUp = document.getElementById('bomber');
+                elementUp.style.top = parseInt(elementUp.style.top) - 5 + 'px';
                 console.log("up");
                 break;
             case 40:
-                this.downArrowPressed;
-                console.log("donw");
+                //this.downArrowPressed();
+                var elementDown = document.getElementById('bomber');
+                elementDown.style.top = parseInt(elementDown.style.top) + 5 + 'px';
+                console.log("down");
                 break;
-            default:
-                console.log("switch out");
         }
     }
 }
