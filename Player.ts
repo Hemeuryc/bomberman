@@ -42,26 +42,30 @@ class Player{
         switch (evt.keyCode) {
             case 37:
                 //this.leftArrowPressed();
-                var elementLeft = document.getElementById('bomber');
-                elementLeft.style.left = parseInt(elementLeft.style.left) - 5 + 'px';
+                var elementLeft = document.getElementById("bomber");
+                console.log(elementLeft.style.left);
+                elementLeft.style.left = parseInt(elementLeft.style.left) - 50 + "px";
                 console.log("left");
                 break;
             case 39:
                 //this.rightArrowPressed();
-                var elementRight = document.getElementById('bomber');
-                elementRight.style.left = parseInt(elementRight.style.left) + 5 + 'px';
+                var elementRight = document.getElementById("bomber");
+                console.log(elementRight.style.left);
+                elementRight.style.left = parseInt(elementRight.style.left) + 50 + "px";
                 console.log("right");
                 break;
             case 38:
                 //this.upArrowPressed();
-                var elementUp = document.getElementById('bomber');
-                elementUp.style.top = parseInt(elementUp.style.top) - 5 + 'px';
+                var elementUp = document.getElementById("bomber");
+                console.log(elementUp.style.top);
+                elementUp.style.top = parseInt(elementUp.style.top) - 50 + "px";
                 console.log("up");
                 break;
             case 40:
                 //this.downArrowPressed();
-                var elementDown = document.getElementById('bomber');
-                elementDown.style.top = parseInt(elementDown.style.top) + 5 + 'px';
+                var elementDown = document.getElementById("bomber");
+                console.log(elementDown.style.top);
+                elementDown.style.top = parseInt(elementDown.style.top) + 50 + "px";
                 console.log("down");
                 break;
         }
